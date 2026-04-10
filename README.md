@@ -51,7 +51,7 @@ This design improves both accuracy and efficiency on long-video benchmarks. :con
   - LongVideoBench
   - VideoMME (long subset)
   - LVBench
-  - MLVU :contentReference[oaicite:5]{index=5} :contentReference[oaicite:6]{index=6}
+  - MLVU
 
 ---
 
