@@ -26,8 +26,6 @@ swift sft \
     --use_chat_template False \
     --max_length 200000
 
-
-
 FPS_MAX_FRAMES=64 \
 VIDEO_MAX_PIXELS=50176 \
 CUDA_VISIBLE_DEVICES=4,5,6,7 \
@@ -39,12 +37,10 @@ swift rlhf \
     --use_vllm true \
     --vllm_mode colocate \
     --vllm_gpu_memory_utilization 0.75 \
-    --vllm_max_model_len 20480 \
     --vllm_tensor_parallel_size 4 \
     --dataset dataset/grpo.jsonl  \
     --torch_dtype bfloat16 \
     --num_train_epochs 1 \
-    --max_length 20480 \
     --per_device_train_batch_size 1 \
     --per_device_eval_batch_size 1 \
     --gradient_accumulation_steps 2 \

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="VideoPro: Adaptive Program Reasoning for Long Video Understanding">
+  <meta name="keywords" content="Video Understanding, Program Reasoning, Long Video, VideoLLM, Self-Refinement">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VideoPro</title>
+
+  <link rel="stylesheet" href="./static/bulma.min.css">
+  <link rel="stylesheet" href="./static/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/academicons.min.css">
+  <link rel="stylesheet" href="./static/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/fontawesome.all.min.js"></script>
+  <script src="./static/bulma-carousel.min.js"></script>
+  <script src="./static/bulma-slider.min.js"></script>
+
+  <style>
+    .section-divider {
+      border: none;
+      border-top: 1px solid #e8e8e8;
+      margin: 2rem 0;
+    }
+    .highlight-box {
+      background: #f5f5f5;
+      border-left: 4px solid #3273dc;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tag-badge {
+      font-size: 0.85em;
+      margin: 2px;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<!-- Hero / Title -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <span style="vertical-align: middle">VideoPro: Adaptive Program Reasoning for Long Video Understanding</span>
+          </h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=7LlS58IAAAAJ&hl=zh-CN"><b>Chenglin Li</b></a><sup>1,2</sup>,
+            </span>
+            <!-- Add more authors here -->
+          </div>
+
+          <div class="is-size-5 publication-authors" style="margin-top: 0.5rem;">
+            <span class="author-block" style="margin-right: 15px;"><sup>1</sup>Fudan University,</span>
+            <span class="author-block" style="margin-right: 15px;"><sup>2</sup>Shanghai Innovation Institute</span>
+          </div>
+
+          <!-- Links -->
+          <div class="column has-text-centered" style="margin-top: 1rem;">
+            <div class="publication-links">
+              <!-- Paper -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code -->
+              <span class="link-block">
+                <a href="https://github.com/lichenglin/VideoPro" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <!-- Dataset -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    🤗
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+              <!-- Model -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    🤗
+                  </span>
+                  <span>Model</span>
+                </a>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Overview / Teaser -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="content has-text-centered" style="margin-top: 0.5rem;">
+        <!-- Replace with actual teaser image -->
+        <img src="./static/images/teaser.png" alt="VideoPro Overview" style="max-width: 100%;">
+      </div>
+    </div>
+    <div class="hero-body">
+      <h2 class="subtitle has-text-justified">
+        <p>
+          <b>VideoPro</b> is a unified framework for long-video understanding with <b>adaptive reasoning</b> and <b>self-refinement</b>.
+          It dynamically routes each query to either native VideoLLM reasoning or multi-step visual program reasoning,
+          and performs self-refinement when execution fails or prediction confidence is low.
+        </p>
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- Highlights -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">✨ Highlights</h2>
+      </div>
+    </div>
+    <div class="hero-body">
+      <div class="content">
+        <ul>
+          <li><b>Adaptive query-level routing</b> between native reasoning and program reasoning</li>
+          <li><b>Executable visual programs</b> for long-range temporal and semantic grounding</li>
+          <li><b>Execution-driven and confidence-driven refinement</b></li>
+          <li><b>Coarse-to-fine video analysis pipeline</b> rather than naive frame-by-frame scanning</li>
+          <li>Strong results on <b>LongVideoBench</b>, <b>VideoMME</b> (long subset), <b>LVBench</b>, <b>MLVU</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Framework -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Framework</h2>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="content has-text-centered" style="margin-top: 1rem;">
+        <img src="./static/images/pipeline.png" alt="VideoPro Pipeline" width="900">
+      </div>
+    </div>
+    <div class="hero-body">
+      <h2 class="subtitle has-text-justified">
+        <p class="has-text-centered">
+          <b>VideoPro Framework.</b><br>
+          The framework consists of three key components: adaptive routing, visual program reasoning, and self-refinement.
+        </p>
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- Method Details -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+      </div>
+    </div>
+    <div class="hero-body">
+      <div class="content">
+        <h4>Adaptive Reasoning</h4>
+        <p>
+          VideoPro routes each query to either:
+        </p>
+        <ul>
+          <li><b>Native VideoLLM reasoning</b> — for simple or high-confidence questions</li>
+          <li><b>Multi-step visual program reasoning</b> — for complex long-range queries</li>
+        </ul>
+
+        <h4>Self-Refinement</h4>
+        <ul>
+          <li>Fix failed programs using runtime error logs</li>
+          <li>Refine low-confidence native / program reasoning outputs</li>
+        </ul>
+
+        <h4>General Video Module Library</h4>
+        <ul>
+          <li>Multimodal retrieval</li>
+          <li>Temporal localization</li>
+          <li>Fine-grained visual extraction</li>
+          <li>Global context summarization</li>
+          <li>Reasoning and answer generation</li>
+        </ul>
+
+        <h4>Training</h4>
+        <p>
+          The framework is trained in two stages:
+          <b>Stage 1</b> — Supervised Fine-Tuning (SFT);
+          <b>Stage 2</b> — Group Relative Policy Optimization (GRPO).
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="content has-text-centered" style="margin-top: 1rem;">
+        <img src="./static/images/results.png" alt="VideoPro Results" width="1100">
+      </div>
+    </div>
+    <div class="hero-body">
+      <h2 class="subtitle has-text-justified">
+        <p class="has-text-centered">
+          <b>Benchmark Results.</b><br>
+          VideoPro achieves strong performance on LongVideoBench, VideoMME (long subset), LVBench, and MLVU.
+        </p>
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code class="language-bibtex">@article{videopro,
+  title={VideoPro: Adaptive Program Reasoning for Long Video Understanding},
+  author={Li, Chenglin and others},
+  journal={arXiv preprint},
+  year={2026}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        Website template borrowed from <a href="https://maplebb.github.io/UniREditBench/">UniREditBench</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
