@@ -37,7 +37,7 @@ We propose <b>VideoPro</b>, a unified framework for long-video understanding wit
 
 - **General Video Module Library**: A rich set of callable APIs available within visual programs, including multimodal retrieval, temporal localization (`trim_frames`, `trim_around`, `trim_before`, `trim_after`), object detection (`detect_object`), frame extraction (`extract_frames`), subtitle-based retrieval (`get_subtitle_hints`), and multi-choice QA (`query_mc`, `query_native`, `query_frames`).
 
-- **Two-Stage Training**: Stage 1 — Supervised Fine-Tuning (SFT) on 7,489 program reasoning samples; Stage 2 — Group Relative Policy Optimization (GRPO) on 6,009 self-refinement samples covering all three refinement modes.
+- **Two-Stage Training**: Stage 1 — Supervised Fine-Tuning (SFT) samples; Stage 2 — Group Relative Policy Optimization (GRPO) samples covering refinement modes.
 
 <img alt="image" src="docs/static/images/pipeline.png" />
 
