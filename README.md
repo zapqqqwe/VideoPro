@@ -2,14 +2,14 @@
     <h1 align="center">VideoPro: Adaptive Program Reasoning for Long Video Understanding
     </h1>
 
-<a href="#">
-<img src='https://img.shields.io/badge/arXiv-VideoPro-blue' alt='Paper PDF'></a>
+<a href="https://arxiv.org/abs/2509.17743">
+<img src='https://img.shields.io/badge/arXiv-2509.17743-blue' alt='Paper PDF'></a>
 
-<a href="https://lichenglin.github.io/VideoPro/">
-<img src='https://img.shields.io/badge/Website-project page-orange' alt='Project Page'></a>
+<!-- <a href="https://lichenglin.github.io/VideoPro/">
+<img src='https://img.shields.io/badge/Website-project page-orange' alt='Project Page'></a> -->
 
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-VideoPro_Model-yellow)](https://huggingface.co/lichenglin/VideoPro)
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-VideoPro_Dataset-yellow)](https://huggingface.co/datasets/lichenglin/VideoPro)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-VideoPro_Model-yellow)](https://huggingface.co/zapqqqwe/videopro_grpo)
+<!-- [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-VideoPro_Dataset-yellow)](https://huggingface.co/datasets/lichenglin/VideoPro) -->
 
 </div>
 
@@ -57,13 +57,10 @@ pip install flash_attn==2.8.3 --no-build-isolation
 
 #### 1. Model Download
 ```bash
-huggingface-cli download --resume-download lichenglin/VideoPro --local-dir ./models/videopro
+huggingface-cli download --resume-download zapqqqwe/videopro_grpo --local-dir ./models/videopro
 ```
 
-#### 2. Dataset Download
-```bash
-huggingface-cli download --repo-type dataset --resume-download lichenglin/VideoPro --local-dir ./dataset
-```
+#### 2. Dataset
 
 The dataset includes:
 - `dataset/train_sft.jsonl` — SFT training data (7,489 program reasoning samples)
@@ -265,7 +262,7 @@ If you have any comments or questions, please open a new issue or feel free to c
 @article{videopro,
   title={VideoPro: Adaptive Program Reasoning for Long Video Understanding},
   author={Li, Chenglin and others},
-  journal={arXiv preprint},
-  year={2026}
+  journal={arXiv preprint arXiv:2509.17743},
+  year={2025}
 }
 ```
